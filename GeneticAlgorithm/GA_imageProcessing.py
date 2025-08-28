@@ -11,7 +11,7 @@ MUT_RATE = 0.3
 ELITE = 2 
 
 # Load image
-original = Image.open("input.jpg").convert("RGB")
+original = Image.open("myImage.jpg").convert("RGB")
 original_np = np.array(original)
 
 # For a reference image, load it
@@ -89,7 +89,7 @@ def run_ga():
         pop = new_pop
 
     best_img = apply_adjustments(best_ind)
-    best_img.save("optimized.jpg")
+    best_img.save("processed.jpg")
     print("Best parameters found:", best_ind)
     print(best_img)
 
